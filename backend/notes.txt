@@ -1,7 +1,0 @@
-
-
-
-
-// after downloading the pdfs
-
-tabula-py needs java to be installed in your computer

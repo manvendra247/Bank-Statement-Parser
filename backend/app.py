@@ -19,14 +19,11 @@ creds = get_credentials()
 service = build('gmail', 'v1', credentials=creds)
 current_dir = os.getcwd()
 pdfs_dir = os.path.join(current_dir, 'pdfs')
-csv_dir = os.path.join(current_dir, 'CSVs')
 
 # extract pdfs from gmail.
 if not os.path.exists(pdfs_dir):
     os.mkdir(pdfs_dir)
 
-if not os.path.exists(csv_dir):
-    os.mkdir(csv_dir)
 results = service.users().messages().list(userId='me', q="Subject:'Bank Statement'").execute()
 messages = results.get('messages', [])
 table_data = []
