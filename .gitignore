@@ -1,0 +1,4 @@
+/backend/__pycache__
+/backend/transaction-extractor
+.pickle
+/frontend/node_modules
